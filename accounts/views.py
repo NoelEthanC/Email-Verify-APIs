@@ -6,18 +6,11 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
 import jwt
-from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.conf import settings
 from drf_yasg import openapi
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils.encoding import smart_str, force_str, smart_bytes, DjangoUnicodeDecodeError
 from drf_yasg.utils import swagger_auto_schema
 from .utils import Util
 
-
-'''to be removed'''
-class Home(ListAPIView):
-    pass
 
 class SignUp(GenericAPIView):
     
