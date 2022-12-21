@@ -3,15 +3,19 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from django.contrib import admin
 from django.urls import path, include
-
+from .swagger import BothHttpAndHttpsSchemaGenerator
+import json
 
 schema_view = get_schema_view(
    openapi.Info(
       title="Email-Verify API",
       default_version='v1',
       description="An API that will allow users to send sign up and the API will verify there emails by sending the emails usung the email submitted on sign up  ",
+      # generator_class= type(json.dumps(BothHttpAndHttpsSchemaGenerator.get_schema())),
+      # generator_class= BothHttpAndHttpsSchemaGenerator,
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="noelchiwamba1@gmail.com"),
+      url='https://email-verify-api.up.railway.app/',
       license=openapi.License(name="BSD License"),
    ),
    public=True,
