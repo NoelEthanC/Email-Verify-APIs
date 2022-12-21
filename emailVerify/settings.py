@@ -181,6 +181,11 @@ REST_FRAMEWORK = {
     )
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    # 'https://your-base-domain'
+    'https://email-verify-api.up.railway.app/'
+]
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
