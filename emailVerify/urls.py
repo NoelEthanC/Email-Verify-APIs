@@ -15,9 +15,9 @@ schema_view = get_schema_view(
       # generator_class= BothHttpAndHttpsSchemaGenerator,
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="noelchiwamba1@gmail.com"),
-      url='https://email-verify-api.up.railway.app/',
       license=openapi.License(name="BSD License"),
    ),
+   url='https://email-verify-api.up.railway.app/',
    public=True,
    permission_classes=[permissions.AllowAny],
 )
