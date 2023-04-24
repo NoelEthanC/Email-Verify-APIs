@@ -50,10 +50,10 @@ class VerifyEmail(GenericAPIView ):
     def get(self, request):
         token = request.GET.get('token')
         try:
-            print('this is token:',token)
+            # print('this is token:',token)
             # payload = jwt.decode(token, settings.SECRET_KEY)
             payload = jwt.decode(token, options={"verify_signature": False})
-            print(payload)
+            # print(payload)
             user = models.User.objects.get(id=payload['user_id'])
             if not user.is_verified:
                 user.is_verified = True

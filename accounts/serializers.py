@@ -6,7 +6,8 @@ class SignUpSerializer(serializers.ModelSerializer):
     # tokens = serializers.SerializerMethodField()
     class Meta:
         model = User
-        fields = ['id', 'first_name', 'last_name','username', 'email', 'password', 'phone_number','tokens']
+        fields = ['id', 'first_name', 'last_name',
+                  'username', 'email', 'password', 'phone_number','tokens']
         read_only_fields= ['id',]
         # extra_kwargs = {
         #     'password' : {'write_only':True}
